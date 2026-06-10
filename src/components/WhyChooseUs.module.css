@@ -1,0 +1,126 @@
+.section {
+  padding-top: 40px;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 32px;
+  align-items: stretch;
+}
+
+.leftCol {
+  background: var(--accent);
+  color: #0b0b0c;
+  border-radius: var(--radius);
+  padding: 52px 44px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.smallLabel {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.leftTitle {
+  font-family: var(--font-heading);
+  color: #0b0b0c;
+  font-size: clamp(1.6rem, 3.5vw, 2rem);
+  font-weight: 900;
+  line-height: 1.15;
+  margin-bottom: 18px;
+}
+
+.leftText {
+  color: rgba(11, 11, 12, 0.78);
+  font-size: 17px;
+  margin-bottom: 30px;
+}
+
+.callBtn {
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #0b0b0c;
+  color: #ffffff;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  padding: 16px 30px;
+  border-radius: 999px;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.callBtn:hover {
+  color: #ffffff;
+  background: #000;
+  transform: translateY(-2px);
+}
+
+/* Dark focus ring so it stays visible against the yellow surface */
+.callBtn:focus-visible {
+  outline: 2px solid #0b0b0c;
+  outline-offset: 3px;
+}
+
+.rightCol {
+  background: var(--bg-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 52px 44px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.rightTitle {
+  margin-bottom: 16px;
+}
+
+.rightText {
+  color: var(--text-muted);
+  margin-bottom: 28px;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  gap: 14px;
+}
+
+.list li {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 16px;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 30px;
+  height: 30px;
+  background-color: var(--accent);
+  color: #0b0b0c;
+  border-radius: 50%;
+}
+
+@media (max-width: 880px) {
+  .wrapper { grid-template-columns: 1fr; }
+  .leftCol, .rightCol { padding: 40px 32px; }
+}
