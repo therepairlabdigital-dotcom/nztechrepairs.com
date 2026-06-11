@@ -39,7 +39,7 @@ export default function Hero() {
           <ul className={styles.trust}>
             <li><strong>30 min</strong><span>Avg. fix time</span></li>
             <li><strong>3-month</strong><span>Warranty</span></li>
-            <li><strong>Free</strong><span>Diagnostics</span></li>
+            <li><strong>Genuine</strong><span>Quality parts</span></li>
           </ul>
 
           <div className={styles.payment}>

@@ -5,7 +5,7 @@ import styles from './Contact.module.css';
 const ACCESS_KEY = 'c050f5b941ba45cd9fc7ab2ea0677215';
 
 const DEVICES = ['iPhone', 'iPad', 'MacBook', 'Samsung / Android phone', 'Laptop / PC', 'Apple Watch', 'TV', 'Other'];
-const SERVICES = ['Screen repair', 'Battery replacement', 'Water damage', 'Charging issue', 'Data recovery', 'Software / unlocking', 'Free diagnostics', 'Other'];
+const SERVICES = ['Screen repair', 'Battery replacement', 'Water damage', 'Charging issue', 'Data recovery', 'Software / unlocking', 'Accessories', 'Other'];
 
 export default function ContactForm() {
   const [status, setStatus] = useState<'idle' | 'sending' | 'sent' | 'error'>('idle');

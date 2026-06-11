@@ -1,14 +1,22 @@
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import styles from './Footer.module.css';
 
 const SERVICE_LINKS = [
-  'iPhone & Samsung Repair',
-  'MacBook Repair',
-  'iPad / Tablet Repair',
-  'Computer Repair',
-  'Data Recovery',
-  'TV Repair',
+  { label: 'iPhone Repair', href: '/services/iphone-repair-in-warkworth' },
+  { label: 'Samsung & Android Repair', href: '/services/samsung-android-repair-in-warkworth' },
+  { label: 'MacBook Repair', href: '/services/macbook-repair-in-warkworth' },
+  { label: 'Laptop & Computer Repair', href: '/services/laptop-computer-repair-in-warkworth' },
+  { label: 'Data Recovery & Backup', href: '/services/data-recovery-in-warkworth' },
+  { label: 'TV Repair', href: '/services/tv-repair-in-warkworth' },
+];
+
+const COMPANY_LINKS = [
+  { label: 'Home', href: '/' },
+  { label: 'About Us', href: '/about' },
+  { label: 'All Services', href: '/services' },
+  { label: 'Contact', href: '/contact' },
 ];
 
 export default function Footer() {
@@ -19,7 +27,9 @@ export default function Footer() {
 
           {/* Brand / Contact */}
           <div className={styles.widget}>
-            <Image src="/images/original/nztr-logo.png" alt="NZ Tech Repairs Logo" width={333} height={70} className={styles.logo} />
+            <Link href="/" aria-label="NZ Tech Repairs home">
+              <Image src="/images/original/nztr-logo.png" alt="NZ Tech Repairs Logo" width={333} height={70} className={styles.logo} />
+            </Link>
             <p className={styles.contactItem}>
               Fast, professional device repair in Warkworth — phones, tablets, laptops, TVs &amp; data recovery.
             </p>
@@ -39,7 +49,17 @@ export default function Footer() {
             <h4 className={styles.widgetTitle}>Our Services</h4>
             <ul className={styles.linkList}>
               {SERVICE_LINKS.map((s) => (
-                <li key={s}><a href="#services">{s}</a></li>
+                <li key={s.href}><Link href={s.href}>{s.label}</Link></li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Company */}
+          <div className={styles.widget}>
+            <h4 className={styles.widgetTitle}>Company</h4>
+            <ul className={styles.linkList}>
+              {COMPANY_LINKS.map((c) => (
+                <li key={c.href}><Link href={c.href}>{c.label}</Link></li>
               ))}
             </ul>
           </div>

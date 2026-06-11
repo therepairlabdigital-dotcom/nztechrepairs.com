@@ -55,6 +55,15 @@
   color: var(--accent);
 }
 
+.menu .active {
+  color: var(--accent);
+}
+
+.submenuAll {
+  color: var(--accent) !important;
+  font-weight: 700;
+}
+
 .hasSubmenu {
   position: relative;
 }

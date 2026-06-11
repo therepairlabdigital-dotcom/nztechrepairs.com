@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from 'next';
 import Script from 'next/script';
 import { Montserrat, Noto_Sans } from 'next/font/google';
+import { site } from '@/lib/site';
 import './globals.css';
 
 const montserrat = Montserrat({
@@ -23,8 +24,10 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
+  metadataBase: new URL(site.url),
+  alternates: { canonical: '/' },
   title: 'NZ Tech Repairs | Warkworth Mobile Phone & PC Repair Specialists',
-  description: 'Fast, professional repair services for iPhones, iPads, MacBooks, Apple Watches, Laptops, and TVs in Warkworth. 30-minute average turnaround, 3-month warranty. Diagnostics are free!',
+  description: 'Fast, professional repair services for iPhones, iPads, MacBooks, Apple Watches, laptops, and TVs in Warkworth. 30-minute average turnaround and a 3-month repair warranty.',
   keywords: 'phone repair warkworth, ipad repair, macbook repair warkworth, computer repair, screen replacement warkworth, data recovery nz, tv repair, nz tech repairs, the grange warkworth',
   openGraph: {
     title: 'NZ Tech Repairs | Warkworth Mobile Phone & PC Repair Specialists',

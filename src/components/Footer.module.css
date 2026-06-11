@@ -7,8 +7,8 @@
 
 .top {
   display: grid;
-  grid-template-columns: 1.4fr 1fr 1fr;
-  gap: 48px;
+  grid-template-columns: 1.7fr 1fr 1fr 1.2fr;
+  gap: 44px;
   padding-bottom: 48px;
 }
 

@@ -47,8 +47,8 @@ export default function About() {
               <span>Repair warranty</span>
             </div>
             <div className={styles.stat}>
-              <strong>FREE</strong>
-              <span>Diagnostics</span>
+              <strong>Genuine</strong>
+              <span>Quality parts</span>
             </div>
           </div>
 

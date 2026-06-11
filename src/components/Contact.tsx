@@ -64,7 +64,7 @@ export default function Contact() {
         {/* Right Column - Form */}
         <div className={styles.formCol}>
           <h3 className={styles.formTitle}>Request a Free Quote</h3>
-          <p className={styles.formSubtitle}>Tell us about your device and we&rsquo;ll get back to you fast — diagnostics are always free.</p>
+          <p className={styles.formSubtitle}>Tell us about your device and we&rsquo;ll get back to you fast with a no-obligation repair quote.</p>
           <ContactForm />
         </div>
 

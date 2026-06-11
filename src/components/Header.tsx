@@ -1,61 +1,62 @@
 'use client';
 import React, { useState, useEffect } from 'react';
+import Link from 'next/link';
 import Image from 'next/image';
+import { usePathname } from 'next/navigation';
 import styles from './Header.module.css';
+
+const NAV_SERVICES = [
+  { slug: 'iphone-repair', label: 'iPhone Repair' },
+  { slug: 'samsung-android-repair', label: 'Samsung & Android Repair' },
+  { slug: 'ipad-tablet-repair', label: 'iPad & Tablet Repair' },
+  { slug: 'macbook-repair', label: 'MacBook Repair' },
+  { slug: 'laptop-computer-repair', label: 'Laptop & Computer Repair' },
+  { slug: 'tv-repair', label: 'TV Repair' },
+  { slug: 'data-recovery', label: 'Data Recovery & Backup' },
+  { slug: 'phone-unlocking', label: 'Phone Unlocking' },
+];
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
+    const handleScroll = () => setIsScrolled(window.scrollY > 50);
+    handleScroll();
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const scrollTo = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
-    e.preventDefault();
-    setIsMobileMenuOpen(false);
-    const element = document.getElementById(id);
-    if (element) {
-      window.scrollTo({
-        top: element.offsetTop - 80,
-        behavior: 'smooth'
-      });
-    }
-  };
+  const close = () => setIsMobileMenuOpen(false);
+  const isActive = (href: string) => (href === '/' ? pathname === '/' : pathname.startsWith(href));
 
   return (
     <header className={`${styles.header} ${isScrolled ? styles.scrolled : ''}`}>
       <div className="container">
         <div className={styles.inner}>
           <div className={styles.logoWrapper}>
-            <a href="#" onClick={(e) => scrollTo(e, 'home')}>
+            <Link href="/" onClick={close} aria-label="NZ Tech Repairs home">
               <Image src="/images/original/nztr-logo.png" alt="NZ Tech Repairs Logo" width={333} height={70} className={styles.logo} priority />
-            </a>
+            </Link>
           </div>
 
           <nav id="primary-nav" className={`${styles.nav} ${isMobileMenuOpen ? styles.mobileOpen : ''}`}>
             <ul className={styles.menu}>
-              <li><a href="#" onClick={(e) => scrollTo(e, 'home')}>Home</a></li>
-              <li><a href="#" onClick={(e) => scrollTo(e, 'about')}>About Us</a></li>
+              <li><Link href="/" onClick={close} className={isActive('/') ? styles.active : ''}>Home</Link></li>
+              <li><Link href="/about" onClick={close} className={isActive('/about') ? styles.active : ''}>About Us</Link></li>
               <li className={styles.hasSubmenu}>
-                <a href="#" onClick={(e) => scrollTo(e, 'services')}>Repair Services <span aria-hidden="true">▾</span></a>
+                <Link href="/services" onClick={close} className={isActive('/services') ? styles.active : ''}>
+                  Repair Services <span aria-hidden="true">▾</span>
+                </Link>
                 <ul className={styles.submenu}>
-                  <li><a href="#" onClick={(e) => scrollTo(e, 'services')}>iPhone & Samsung Phone Repair</a></li>
-                  <li><a href="#" onClick={(e) => scrollTo(e, 'services')}>MacBook Repair</a></li>
-                  <li><a href="#" onClick={(e) => scrollTo(e, 'services')}>iPad / Tablet Repair</a></li>
-                  <li><a href="#" onClick={(e) => scrollTo(e, 'services')}>iWatch & iMac Repair</a></li>
-                  <li><a href="#" onClick={(e) => scrollTo(e, 'services')}>Computer Repair</a></li>
-                  <li><a href="#" onClick={(e) => scrollTo(e, 'services')}>Data Recovery & Backup</a></li>
-                  <li><a href="#" onClick={(e) => scrollTo(e, 'services')}>Phone Unlocking</a></li>
-                  <li><a href="#" onClick={(e) => scrollTo(e, 'services')}>TV Repair</a></li>
+                  {NAV_SERVICES.map((s) => (
+                    <li key={s.slug}><Link href={`/services/${s.slug}-in-warkworth`} onClick={close}>{s.label}</Link></li>
+                  ))}
+                  <li><Link href="/services" onClick={close} className={styles.submenuAll}>View all services →</Link></li>
                 </ul>
               </li>
-              <li><a href="#" onClick={(e) => scrollTo(e, 'testimonials')}>Testimonials</a></li>
-              <li><a href="#" onClick={(e) => scrollTo(e, 'contact')}>Contact</a></li>
+              <li><Link href="/contact" onClick={close} className={isActive('/contact') ? styles.active : ''}>Contact</Link></li>
               <li className={styles.mobileCta}>
                 <a href="tel:0278270002" className="btn">Call 027-827-0002</a>
               </li>
