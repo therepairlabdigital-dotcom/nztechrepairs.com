@@ -17,13 +17,12 @@ export const site = {
   },
   geo: { lat: -36.3986, lng: 174.6635 },
   hours: [
-    { days: 'Monday – Friday', open: '9:00am', close: '5:30pm' },
-    { days: 'Saturday', open: '9:00am', close: '4:00pm' },
-    { days: 'Sunday', open: 'Closed', close: '' },
+    { days: 'Monday – Friday', open: '9:00am', close: '6:00pm' },
+    { days: 'Saturday – Sunday', open: '10:00am', close: '5:00pm' },
   ],
   openingHoursSpec: [
-    { days: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'], opens: '09:00', closes: '17:30' },
-    { days: ['Saturday'], opens: '09:00', closes: '16:00' },
+    { days: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'], opens: '09:00', closes: '18:00' },
+    { days: ['Saturday', 'Sunday'], opens: '10:00', closes: '17:00' },
   ],
   areasServed: ['Warkworth', 'Matakana', 'Snells Beach', 'Algies Bay', 'Wellsford', 'Puhoi', 'Mahurangi', 'Rodney'],
   social: {

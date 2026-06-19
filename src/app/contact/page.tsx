@@ -8,7 +8,7 @@ import { site } from '@/lib/site';
 export const metadata: Metadata = {
   title: 'Contact NZ Tech Repairs | Warkworth Repair Shop | 027-827-0002',
   description:
-    'Contact NZ Tech Repairs in Warkworth — call 027-827-0002, email us, or visit 8/9 Fairwater Road. No appointment needed. Open Mon–Fri 9–5:30, Sat 9–4.',
+    'Contact NZ Tech Repairs in Warkworth — call 027-827-0002, email us, or visit 8/9 Fairwater Road. No appointment needed. Open Mon–Fri 9–6, Sat–Sun 10–5.',
   keywords: ['contact nz tech repairs', 'phone repair warkworth contact', 'repair shop warkworth', 'nz tech repairs phone number'],
   alternates: { canonical: '/contact' },
   openGraph: {

@@ -55,7 +55,7 @@ export default function Contact() {
               </span>
               <div>
                 <strong>Open Hours</strong>
-                <span>Mon&ndash;Fri 9am&ndash;5:30pm &middot; Sat 9am&ndash;4pm</span>
+                <span>Mon&ndash;Fri 9am&ndash;6pm &middot; Sat&ndash;Sun 10am&ndash;5pm</span>
               </div>
             </div>
           </div>
