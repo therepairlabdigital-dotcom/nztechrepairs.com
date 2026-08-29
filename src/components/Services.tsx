@@ -5,14 +5,14 @@ import ServiceIcon from './ServiceIcon';
 import styles from './Services.module.css';
 
 const SERVICES = [
-  { slug: 'iphone-repair', icon: 'phone', img: '/images/original/service-phone.jpg', title: 'iPhone & Samsung Repair', desc: 'Cracked screens, batteries and charging faults — fixed in about 30 minutes.' },
-  { slug: 'ipad-tablet-repair', icon: 'tablet', img: '/images/original/service-tablet.jpg', title: 'iPad & Tablet Repair', desc: 'Glass, display and battery repairs for iPads and Android tablets.' },
-  { slug: 'macbook-repair', icon: 'macbook', img: '/images/original/service-macbook.webp', title: 'MacBook Repair', desc: 'Screens, batteries, keyboards and logic-board faults sorted by experts.' },
-  { slug: 'apple-watch-repair', icon: 'watch', img: '/images/original/service-iwatch.webp', title: 'Apple Watch Repair', desc: 'Precise screen and battery repairs that restore your Watch like new.' },
-  { slug: 'laptop-computer-repair', icon: 'laptop', img: '/images/original/service-computer.jpg', title: 'Computer & Laptop Repair', desc: 'Slow, crashing or virus-ridden? Windows and Mac running like new.' },
-  { slug: 'tv-repair', icon: 'tv', img: '/images/original/service-tv.webp', title: 'TV Repair', desc: 'No picture, no power or lines on screen? Often cheaper to fix than replace.' },
-  { slug: 'data-recovery', icon: 'data', img: '/images/original/service-data.png', title: 'Data Recovery & Backup', desc: 'Recover precious photos and files from dead phones, drives and PCs.' },
-  { slug: 'phone-unlocking', icon: 'unlock', img: '/images/original/service-unlocking.png', title: 'Phone Unlocking & Software', desc: 'Network unlocking, software fixes, updates and new-phone setup.' },
+  { slug: 'iphone-repair', icon: 'phone', img: '/images/lab/mobile-repair-clean.webp', title: 'iPhone & Samsung Repair', desc: 'Cracked screens, batteries and charging faults — fixed in about 30 minutes.' },
+  { slug: 'ipad-tablet-repair', icon: 'tablet', img: '/images/lab/mobile-repair-small-1.webp', title: 'iPad & Tablet Repair', desc: 'Glass, display and battery repairs for iPads and Android tablets.' },
+  { slug: 'macbook-repair', icon: 'macbook', img: '/images/lab/service-bench-chip.webp', title: 'MacBook Repair', desc: 'Screens, batteries, keyboards and logic-board faults sorted by experts.' },
+  { slug: 'apple-watch-repair', icon: 'watch', img: '/images/lab/smart-watch.webp', title: 'Apple Watch Repair', desc: 'Precise screen and battery repairs that restore your Watch like new.' },
+  { slug: 'laptop-computer-repair', icon: 'laptop', img: '/images/lab/service-bench-technician.webp', title: 'Computer & Laptop Repair', desc: 'Slow, crashing or virus-ridden? Windows and Mac running like new.' },
+  { slug: 'tv-repair', icon: 'tv', img: '/images/lab/tv-repair-technician.webp', title: 'TV Repair', desc: 'No picture, no power or lines on screen? Often cheaper to fix than replace.' },
+  { slug: 'data-recovery', icon: 'data', img: '/images/lab/technician-microscope-repair.webp', title: 'Data Recovery & Backup', desc: 'Recover precious photos and files from dead phones, drives and PCs.' },
+  { slug: 'phone-unlocking', icon: 'unlock', img: '/images/lab/unlocking-services.webp', title: 'Phone Unlocking & Software', desc: 'Network unlocking, software fixes, updates and new-phone setup.' },
 ];
 
 export default function Services() {

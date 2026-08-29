@@ -1,20 +1,29 @@
 :root {
-  /* Brand palette — black background, yellow accent, white text */
+  /* Brand palette — black background, yellow accent, white text.
+     Colours are ours; the geometry, type scale and rhythm below follow the
+     Repair Lab design system. */
   --bg:            #0b0b0c; /* page background */
   --bg-2:          #141416; /* elevated surfaces / cards */
   --bg-3:          #1c1c1f; /* inputs / hovers */
+  --bg-alt:        #0e0e10; /* alternating section band */
   --accent:        #ffd21e; /* brand yellow */
   --accent-dark:   #e6bd00; /* yellow hover */
   --accent-soft:   rgba(255, 210, 30, 0.12);
+  --accent-line:   rgba(255, 210, 30, 0.30); /* card borders */
+  --accent-ring:   rgba(255, 210, 30, 0.25); /* icon chip ring */
   --text:          #ffffff;
   --text-muted:    #b4b4bd;
+  --text-body:     rgba(255, 255, 255, 0.82);
   --border:        rgba(255, 255, 255, 0.08);
   --border-strong: rgba(255, 255, 255, 0.16);
 
   /* Fonts are provided by next/font as --font-heading / --font-body on <html> */
 
-  --section-pad: 88px;
+  --section-pad: 80px;
   --radius:      16px;
+  --radius-card: 20px;
+  --radius-lg:   28px;
+  --radius-btn:  10px;
 }
 
 * {
@@ -37,22 +46,29 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+/* Repair Lab type: semibold headings, generous line-height, slight negative
+   tracking. Deliberately NOT the heavy 800/900 weights — the airiness is the
+   whole point of the system. */
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading);
-  font-weight: 800;
+  font-weight: 600;
   color: var(--text);
-  line-height: 1.15;
+  line-height: 1.28;
   letter-spacing: -0.01em;
+  text-wrap: balance;
 }
 
-h1 { font-size: clamp(2.4rem, 6vw, 4rem); }
-h2 { font-size: clamp(2rem, 4vw, 2.75rem); }
-h3 { font-size: 1.5rem; }
-h4 { font-size: 1.2rem; }
+h1 { font-size: clamp(1.85rem, 4.4vw, 3.375rem); line-height: 1.24; }
+h2 { font-size: clamp(1.75rem, 3.4vw, 2.75rem); line-height: 1.26; }
+h3 { font-size: 1.375rem; }
+h4 { font-size: 1.15rem; }
 h5 { font-size: 1.05rem; }
 h6 { font-size: 0.95rem; }
 
 p { color: var(--text-muted); }
+
+/* Accent word or full stop inside a heading. */
+.accent { color: var(--accent); }
 
 a {
   color: var(--accent);
@@ -64,10 +80,9 @@ a:hover { color: var(--accent-dark); }
 
 img { max-width: 100%; display: block; }
 
-/* Visible keyboard focus (theme-safe yellow ring) */
 :focus-visible {
-  outline: 2px solid var(--accent);
-  outline-offset: 2px;
+  outline: 3px solid rgba(255, 210, 30, 0.5);
+  outline-offset: 3px;
   border-radius: 4px;
 }
 
@@ -75,64 +90,67 @@ img { max-width: 100%; display: block; }
   outline: none;
 }
 
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 24px;
+::selection {
+  background: rgba(255, 210, 30, 0.28);
+  color: #0b0b0c;
 }
 
-/* Eyebrow label used above section titles */
+/* Repair Lab's wide container. */
+.container {
+  width: min(92%, 1450px);
+  margin-inline: auto;
+}
+
+/* Eyebrow label above section titles — medium weight, wide tracking. */
 .eyebrow {
   display: inline-block;
   font-family: var(--font-heading);
-  font-weight: 700;
-  font-size: 13px;
-  letter-spacing: 0.18em;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--accent);
-  margin-bottom: 16px;
+  margin-bottom: 18px;
 }
 
-/* Buttons */
+/* Buttons — 10px radius, comfortable height, medium weight, sentence case. */
 .btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
+  min-height: 56px;
   background-color: var(--accent);
   color: #0b0b0c;
   font-family: var(--font-heading);
-  font-weight: 700;
-  font-size: 14px;
-  letter-spacing: 0.02em;
-  line-height: 1;
-  text-transform: uppercase;
-  border: 2px solid var(--accent);
-  border-radius: 999px;
-  padding: 16px 32px;
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: 1.2;
+  text-transform: none;
+  border: 1px solid var(--accent);
+  border-radius: var(--radius-btn);
+  padding: 14px 28px;
   cursor: pointer;
-  transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
 }
 
 .btn:hover {
   background-color: var(--accent-dark);
   border-color: var(--accent-dark);
   color: #0b0b0c;
-  transform: translateY(-2px);
-  box-shadow: 0 12px 28px rgba(255, 210, 30, 0.25);
 }
 
 .btn-outline {
   background-color: transparent;
   color: var(--text);
-  border: 2px solid var(--border-strong);
+  border: 1px solid var(--accent);
 }
 
 .btn-outline:hover {
-  background-color: transparent;
+  background-color: rgba(255, 210, 30, 0.1);
   border-color: var(--accent);
-  color: var(--accent);
-  box-shadow: none;
+  color: var(--text);
 }
 
 /* Section helpers */
@@ -141,15 +159,57 @@ img { max-width: 100%; display: block; }
   position: relative;
 }
 
-.section-head {
-  text-align: center;
-  max-width: 680px;
-  margin: 0 auto 64px;
+/* Alternating band, the dark equivalent of the Repair Lab's #f7f7f7 sections. */
+.section-alt {
+  background: var(--bg-alt);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
 }
 
-.section-head p { margin-top: 16px; }
+.section-head {
+  text-align: center;
+  max-width: 780px;
+  margin: 0 auto 56px;
+}
+
+.section-head p { margin-top: 18px; font-size: 18px; line-height: 1.75; }
+
+/* ---------- Hero backdrop: near-black canvas, fine grid, warm bloom ----------
+   Paint-only, no image download on the LCP element. */
+
+.hero-canvas { background-color: #09090a; }
+
+.hero-grid {
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.055) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.055) 1px, transparent 1px);
+  background-size: 62px 62px;
+  -webkit-mask-image: radial-gradient(ellipse 85% 75% at 42% 45%, #000 30%, transparent 100%);
+  mask-image: radial-gradient(ellipse 85% 75% at 42% 45%, #000 30%, transparent 100%);
+}
+
+/* Warm bloom behind the headline — yellow rather than the Lab's orange. */
+.hero-bloom {
+  background:
+    radial-gradient(42% 52% at 30% 44%, rgba(255, 210, 30, 0.26) 0%, rgba(255, 210, 30, 0.08) 45%, transparent 72%),
+    radial-gradient(34% 44% at 82% 72%, rgba(255, 210, 30, 0.11) 0%, transparent 70%);
+}
+
+.hero-vignette {
+  background: radial-gradient(120% 100% at 50% 50%, transparent 45%, rgba(0, 0, 0, 0.6) 100%);
+}
 
 @media (max-width: 768px) {
-  :root { --section-pad: 64px; }
-  .section-head { margin-bottom: 44px; }
+  :root { --section-pad: 60px; }
+  .section-head { margin-bottom: 40px; }
+  .btn { min-height: 52px; font-size: 15px; padding: 13px 24px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
 }

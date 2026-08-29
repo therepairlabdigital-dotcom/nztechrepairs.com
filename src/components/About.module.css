@@ -52,7 +52,7 @@
 
 .experienceBadge strong {
   font-family: var(--font-heading);
-  font-weight: 900;
+  font-weight: 600;
   font-size: 26px;
   line-height: 1;
 }
@@ -101,7 +101,7 @@
 .stat strong {
   display: block;
   font-family: var(--font-heading);
-  font-weight: 800;
+  font-weight: 600;
   font-size: 22px;
   color: var(--accent);
   line-height: 1.2;

@@ -9,7 +9,8 @@ export default function About() {
         <div className={styles.imageCol}>
           <div className={styles.imageFrame}>
             <Image
-              src="/images/original/about-shop.webp"
+              src="/images/lab/about-hero.webp"
+            priority
               alt="NZ Tech Repairs Shop in Warkworth"
               fill
               sizes="(max-width: 768px) 100vw, 45vw"

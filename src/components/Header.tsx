@@ -16,6 +16,35 @@ const NAV_SERVICES = [
   { slug: 'phone-unlocking', label: 'Phone Unlocking' },
 ];
 
+const NAV_AREAS = [
+  { slug: 'warkworth', label: 'Warkworth' },
+  { slug: 'matakana', label: 'Matakana' },
+  { slug: 'snells-beach', label: 'Snells Beach' },
+  { slug: 'sandspit', label: 'Sandspit' },
+  { slug: 'omaha', label: 'Omaha' },
+  { slug: 'wellsford', label: 'Wellsford' },
+  { slug: 'mangawhai', label: 'Mangawhai' },
+  { slug: 'orewa', label: 'Orewa' },
+  { slug: 'silverdale', label: 'Silverdale' },
+];
+
+const NAV_MORE = [
+  { href: '/book-a-repair', label: 'Book a Repair' },
+  { href: '/iphone-models', label: 'iPhone Repair by Model' },
+  { href: '/mail-in-repair-nz', label: 'Mail-In Repair (NZ wide)' },
+  { href: '/winz-quotes-repair-warkworth', label: 'WINZ Quotes' },
+  { href: '/business-device-repair-warkworth', label: 'Business Repair' },
+  { href: '/student-device-repair-warkworth', label: 'Student & School Repair' },
+  { href: '/ps5-repair-warkworth', label: 'PS5 Repair' },
+  { href: '/ps4-repair-warkworth', label: 'PS4 Repair' },
+  { href: '/hdmi-port-repair-warkworth', label: 'HDMI Port Repair' },
+  { href: '/drone-repair-warkworth', label: 'Drone Repair' },
+  { href: '/sell-your-phone-warkworth', label: 'Sell Your Phone' },
+  { href: '/buy-second-hand-phones-warkworth', label: 'Second-Hand Phones' },
+  { href: '/faqs', label: 'FAQs' },
+  { href: '/make-a-payment', label: 'Payments' },
+];
+
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -54,6 +83,27 @@ export default function Header() {
                     <li key={s.slug}><Link href={`/services/${s.slug}-in-warkworth`} onClick={close}>{s.label}</Link></li>
                   ))}
                   <li><Link href="/services" onClick={close} className={styles.submenuAll}>View all services →</Link></li>
+                </ul>
+              </li>
+              <li className={styles.hasSubmenu}>
+                <Link href="/service-areas" onClick={close} className={isActive('/service-areas') ? styles.active : ''}>
+                  Areas <span aria-hidden="true">▾</span>
+                </Link>
+                <ul className={styles.submenu}>
+                  {NAV_AREAS.map((a) => (
+                    <li key={a.slug}><Link href={`/phone-repair-${a.slug}`} onClick={close}>{a.label}</Link></li>
+                  ))}
+                  <li><Link href="/service-areas" onClick={close} className={styles.submenuAll}>All service areas →</Link></li>
+                </ul>
+              </li>
+              <li className={styles.hasSubmenu}>
+                <Link href="/book-a-repair" onClick={close} className={isActive('/book-a-repair') ? styles.active : ''}>
+                  More <span aria-hidden="true">▾</span>
+                </Link>
+                <ul className={styles.submenu}>
+                  {NAV_MORE.map((m) => (
+                    <li key={m.href}><Link href={m.href} onClick={close}>{m.label}</Link></li>
+                  ))}
                 </ul>
               </li>
               <li><Link href="/contact" onClick={close} className={isActive('/contact') ? styles.active : ''}>Contact</Link></li>

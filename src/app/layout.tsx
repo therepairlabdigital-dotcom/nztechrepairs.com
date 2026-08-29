@@ -1,21 +1,24 @@
 import type { Metadata, Viewport } from 'next';
 import Script from 'next/script';
-import { Montserrat, Noto_Sans } from 'next/font/google';
+import { Noto_Sans } from 'next/font/google';
 import { site } from '@/lib/site';
 import './globals.css';
 
-const montserrat = Montserrat({
-  subsets: ['latin'],
-  weight: ['400', '500', '600', '700', '800', '900'],
-  display: 'swap',
-  variable: '--font-heading',
-});
-
+// The Repair Lab design system is Noto Sans throughout — headings included.
+// Its semibold headline weight is what gives the system its airy feel; a
+// heavier display face fights that.
 const notoSans = Noto_Sans({
   subsets: ['latin'],
   weight: ['400', '500', '600', '700'],
   display: 'swap',
   variable: '--font-body',
+});
+
+const notoSansHeading = Noto_Sans({
+  subsets: ['latin'],
+  weight: ['500', '600', '700'],
+  display: 'swap',
+  variable: '--font-heading',
 });
 
 export const viewport: Viewport = {
@@ -45,7 +48,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${montserrat.variable} ${notoSans.variable}`}>
+    <html lang="en" className={`${notoSansHeading.variable} ${notoSans.variable}`}>
       <body>
         {children}
         {/* Tawk.to live chat — loaded in production only (its perf-beacon CORS

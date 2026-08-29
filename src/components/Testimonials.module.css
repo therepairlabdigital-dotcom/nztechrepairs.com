@@ -1,6 +1,6 @@
 .testimonials {
   position: relative;
-  background-image: url('/images/original/hero-bg.webp');
+  background-image: url('/images/lab/why-choose-bg.webp');
   background-size: cover;
   background-position: center;
   text-align: center;
@@ -43,7 +43,7 @@
   color: #0b0b0c;
   border-radius: 50%;
   font-family: var(--font-heading);
-  font-weight: 900;
+  font-weight: 700;
   font-size: 56px;
   line-height: 78px;
   box-shadow: 0 10px 30px rgba(255, 210, 30, 0.35);
@@ -85,7 +85,7 @@
 .author strong {
   display: block;
   font-family: var(--font-heading);
-  font-weight: 800;
+  font-weight: 600;
   font-size: 17px;
   color: #ffffff;
 }
@@ -99,3 +99,12 @@
   .card { padding: 48px 24px 32px; }
   .quoteText { font-size: 17px; }
 }
+
+/* --- Repair Lab design system --- */
+.card {
+  border-radius: var(--radius-card);
+  border-color: var(--accent-line);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+.quoteText { font-size: 17.5px; line-height: 1.85; }

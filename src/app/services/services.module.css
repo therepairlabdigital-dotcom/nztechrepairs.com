@@ -60,9 +60,10 @@
 }
 
 .h1 {
-  font-size: clamp(2.2rem, 4.5vw, 3.4rem);
-  font-weight: 900;
-  line-height: 1.07;
+  font-size: clamp(1.85rem, 4.2vw, 3.375rem);
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
   margin-bottom: 18px;
 }
 
@@ -87,7 +88,7 @@
 }
 
 .heroTrust div { display: flex; flex-direction: column; }
-.heroTrust strong { font-family: var(--font-heading); font-weight: 800; font-size: 18px; color: var(--accent); }
+.heroTrust strong { font-family: var(--font-heading); font-weight: 600; font-size: 18px; color: var(--accent); }
 .heroTrust span { font-size: 13px; color: #a7a7b0; }
 
 .heroMedia {
@@ -344,3 +345,43 @@
   .hubGrid { grid-template-columns: 1fr; }
   .actions .btn { flex: 1; }
 }
+
+/* --- Repair Lab design system: geometry, borders and type rhythm ---
+   Appended so these win over the earlier declarations in this file. */
+.hubCard,
+.relatedCard,
+.trustCard,
+.faq,
+.fixItem {
+  border-radius: var(--radius-card);
+  border-color: var(--accent-line);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+.hubCard:hover,
+.relatedCard:hover {
+  border-color: var(--accent);
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.45);
+}
+
+.hubCard .ic,
+.relatedCard .ic,
+.trustCard .ic {
+  width: 56px;
+  height: 56px;
+  border-radius: 18px;
+  box-shadow: inset 0 0 0 1px var(--accent-ring);
+}
+
+.heroFrame { border-radius: var(--radius-lg); }
+.heroShape { display: none; }
+
+.hubCard h3 { font-size: 1.25rem; font-weight: 600; line-height: 1.35; }
+.hubCard p { font-size: 15.5px; line-height: 1.75; }
+
+.blockTitle { font-weight: 600; line-height: 1.26; letter-spacing: -0.01em; }
+.tagline { font-size: 20px; line-height: 1.72; }
+.lead p { font-size: 18px; line-height: 1.86; }
+.fixItem { font-weight: 400; font-size: 16px; line-height: 1.7; }
+.heroTrust strong { font-size: 22px; }
+.faq summary { font-weight: 600; font-size: 18px; line-height: 1.45; }

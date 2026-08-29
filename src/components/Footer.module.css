@@ -136,3 +136,24 @@
   .top { grid-template-columns: 1fr; }
   .bottom { justify-content: center; }
 }
+
+/* Areas strip — a flat list of every suburb page, above the copyright bar. */
+.areasStrip {
+  padding: 32px 0 4px;
+  border-top: 1px solid var(--border);
+}
+
+.areasList {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 22px;
+  margin-top: 14px;
+}
+
+.areasList a {
+  color: var(--text-muted);
+  font-size: 13.5px;
+}
+
+.areasList a:hover { color: var(--accent); }

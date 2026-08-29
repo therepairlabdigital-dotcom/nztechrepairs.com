@@ -16,8 +16,42 @@ const COMPANY_LINKS = [
   { label: 'Home', href: '/' },
   { label: 'About Us', href: '/about' },
   { label: 'All Services', href: '/services' },
+  { label: 'Service Areas', href: '/service-areas' },
+  { label: 'Book a Repair', href: '/book-a-repair' },
+  { label: 'FAQs', href: '/faqs' },
+  { label: 'Payments', href: '/make-a-payment' },
   { label: 'Contact', href: '/contact' },
 ];
+
+const MORE_LINKS = [
+  { label: 'Mail-In Repair (NZ wide)', href: '/mail-in-repair-nz' },
+  { label: 'iPhone Repair by Model', href: '/iphone-models' },
+  { label: 'WINZ Quotes', href: '/winz-quotes-repair-warkworth' },
+  { label: 'Business Repair', href: '/business-device-repair-warkworth' },
+  { label: 'Student & School Repair', href: '/student-device-repair-warkworth' },
+  { label: 'PS5 Repair', href: '/ps5-repair-warkworth' },
+  { label: 'HDMI Port Repair', href: '/hdmi-port-repair-warkworth' },
+  { label: 'Drone Repair', href: '/drone-repair-warkworth' },
+  { label: 'Sell Your Phone', href: '/sell-your-phone-warkworth' },
+  { label: 'Second-Hand Phones', href: '/buy-second-hand-phones-warkworth' },
+];
+
+const AREA_LINKS = [
+  'warkworth', 'matakana', 'snells-beach', 'sandspit', 'omaha', 'point-wells',
+  'algies-bay', 'leigh', 'wellsford', 'te-hana', 'kaiwaka', 'mangawhai',
+  'kaipara-flats', 'puhoi', 'waiwera', 'hatfields-beach', 'orewa', 'red-beach',
+  'silverdale', 'millwater', 'whangaparaoa',
+];
+
+const AREA_LABEL: Record<string, string> = {
+  'warkworth': 'Warkworth', 'matakana': 'Matakana', 'snells-beach': 'Snells Beach',
+  'sandspit': 'Sandspit', 'omaha': 'Omaha', 'point-wells': 'Point Wells',
+  'algies-bay': 'Algies Bay', 'leigh': 'Leigh', 'wellsford': 'Wellsford',
+  'te-hana': 'Te Hana', 'kaiwaka': 'Kaiwaka', 'mangawhai': 'Mangawhai',
+  'kaipara-flats': 'Kaipara Flats', 'puhoi': 'Puhoi', 'waiwera': 'Waiwera',
+  'hatfields-beach': 'Hatfields Beach', 'orewa': 'Orewa', 'red-beach': 'Red Beach',
+  'silverdale': 'Silverdale', 'millwater': 'Millwater', 'whangaparaoa': 'Whangaparaoa',
+};
 
 export default function Footer() {
   return (
@@ -64,6 +98,16 @@ export default function Footer() {
             </ul>
           </div>
 
+          {/* More */}
+          <div className={styles.widget}>
+            <h4 className={styles.widgetTitle}>More</h4>
+            <ul className={styles.linkList}>
+              {MORE_LINKS.map((m) => (
+                <li key={m.href}><Link href={m.href}>{m.label}</Link></li>
+              ))}
+            </ul>
+          </div>
+
           {/* Payment + Social */}
           <div className={styles.widget}>
             <h4 className={styles.widgetTitle}>Payment Methods</h4>
@@ -89,6 +133,15 @@ export default function Footer() {
             </div>
           </div>
 
+        </div>
+
+        <div className={styles.areasStrip}>
+          <h4 className={styles.widgetTitle}>Areas We Serve</h4>
+          <ul className={styles.areasList}>
+            {AREA_LINKS.map((key) => (
+              <li key={key}><Link href={`/phone-repair-${key}`}>{AREA_LABEL[key]}</Link></li>
+            ))}
+          </ul>
         </div>
 
         <div className={styles.bottom}>

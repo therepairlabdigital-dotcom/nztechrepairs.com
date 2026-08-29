@@ -1,12 +1,18 @@
 import React from 'react';
 import Header from '@/components/Header';
-import Hero from '@/components/Hero';
-import About from '@/components/About';
-import Services from '@/components/Services';
-import WhyChooseUs from '@/components/WhyChooseUs';
+import Footer from '@/components/Footer';
 import Testimonials from '@/components/Testimonials';
 import Contact from '@/components/Contact';
-import Footer from '@/components/Footer';
+import {
+  FAQPreview,
+  FinalCTA,
+  Guarantees,
+  HomeHero,
+  HomeWhyIntro,
+  RepairProcess,
+  ServiceGrid,
+  WhyChooseUsSection,
+} from '@/components/HomeSections';
 import { site } from '@/lib/site';
 
 const jsonLd = [
@@ -51,12 +57,17 @@ export default function Home() {
   return (
     <>
       <Header />
+      {/* Section order mirrors The Repair Lab homepage. */}
       <main>
-        <Hero />
-        <About />
-        <Services />
-        <WhyChooseUs />
+        <HomeHero />
+        <Guarantees />
+        <HomeWhyIntro />
+        <ServiceGrid />
+        <RepairProcess />
+        <WhyChooseUsSection />
         <Testimonials />
+        <FinalCTA />
+        <FAQPreview />
         <Contact />
       </main>
       <Footer />

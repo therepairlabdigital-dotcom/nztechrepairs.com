@@ -31,9 +31,10 @@
 .leftTitle {
   font-family: var(--font-heading);
   color: #0b0b0c;
-  font-size: clamp(1.6rem, 3.5vw, 2rem);
-  font-weight: 900;
-  line-height: 1.15;
+  font-size: clamp(1.6rem, 3.2vw, 2.1rem);
+  font-weight: 600;
+  line-height: 1.28;
+  letter-spacing: -0.01em;
   margin-bottom: 18px;
 }
 

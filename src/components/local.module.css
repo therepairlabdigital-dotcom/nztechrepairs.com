@@ -1,0 +1,537 @@
+/* Shared styling for the expanded page set: suburb pages, service x suburb
+   pages, per-model device pages and the hand-written intent pages.
+
+   Geometry, spacing and type scale follow the Repair Lab design system —
+   semibold headings on loose line-height, 20/28px card radii, accent-tinted
+   borders, ringed icon chips, 10px buttons. Colours are ours: black + yellow. */
+
+/* ---------- Hero ---------- */
+
+.hero {
+  position: relative;
+  padding: 150px 0 84px;
+  overflow: hidden;
+  color: #fff;
+}
+
+.breadcrumb {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 9px;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.62);
+  margin-bottom: 30px;
+}
+
+.breadcrumb a { color: rgba(255, 255, 255, 0.62); }
+.breadcrumb a:hover { color: var(--accent); }
+.breadcrumb .sep { color: rgba(255, 255, 255, 0.32); }
+.breadcrumb .current { color: var(--accent); }
+
+.heroGrid {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 1fr 0.68fr;
+  gap: 64px;
+  align-items: center;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  color: var(--accent);
+  font-family: var(--font-heading);
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin-bottom: 26px;
+}
+
+.h1 {
+  font-size: clamp(1.85rem, 4.2vw, 3.375rem);
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+  margin-bottom: 26px;
+  text-wrap: balance;
+}
+
+.h1 em { font-style: normal; color: var(--accent); }
+
+.lede {
+  font-size: 20px;
+  line-height: 1.72;
+  color: rgba(255, 255, 255, 0.86);
+  max-width: 58ch;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 40px;
+}
+
+.trustRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-top: 44px;
+  padding-top: 32px;
+  border-top: 1px solid rgba(255, 255, 255, 0.16);
+}
+
+.trustRow div { display: flex; flex-direction: column; gap: 4px; }
+.trustRow strong { font-family: var(--font-heading); font-weight: 600; font-size: 22px; color: var(--accent); line-height: 1.2; }
+.trustRow span { font-size: 14px; color: rgba(255, 255, 255, 0.66); }
+
+.heroMedia { position: relative; }
+
+.heroFrame {
+  position: relative;
+  aspect-ratio: 4 / 3.4;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: var(--bg-2);
+}
+
+/* Product-shot card for a single device.
+   The model webps are opaque white 3:2 photos, so the card is white and the
+   aspect matches the source exactly — anything else leaves a white rectangle
+   floating inside a dark frame. */
+.deviceFrame {
+  position: relative;
+  aspect-ratio: 3 / 2;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--accent-line);
+  background: #ffffff;
+  box-shadow: 0 18px 44px rgba(0, 0, 0, 0.5);
+}
+
+.deviceFrame img { object-fit: cover; }
+
+/* ---------- Two-column body ---------- */
+
+.split {
+  display: grid;
+  grid-template-columns: 1fr 0.72fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.blockTitle {
+  font-size: clamp(1.75rem, 3.2vw, 2.75rem);
+  font-weight: 600;
+  line-height: 1.26;
+  letter-spacing: -0.01em;
+  margin-bottom: 26px;
+  text-wrap: balance;
+}
+
+.blockTitle em { font-style: normal; color: var(--accent); }
+
+.prose p {
+  font-size: 18px;
+  line-height: 1.86;
+  color: var(--text-body);
+  margin-bottom: 20px;
+}
+
+.subTitle {
+  font-family: var(--font-heading);
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin: 40px 0 22px;
+}
+
+.note {
+  margin-top: 34px;
+  padding: 24px 28px;
+  border-radius: var(--radius-card);
+  border: 1px solid var(--accent-line);
+  background: var(--accent-soft);
+  color: rgba(255, 255, 255, 0.86);
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+/* ---------- Checklists ---------- */
+
+.checkList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+  list-style: none;
+}
+
+.checkItem {
+  display: flex;
+  gap: 13px;
+  align-items: flex-start;
+  font-size: 16px;
+  color: var(--text-body);
+  line-height: 1.7;
+}
+
+.check {
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+  margin-top: 3px;
+  color: var(--accent);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ---------- Sidebar card ---------- */
+
+.aside {
+  position: sticky;
+  top: 100px;
+  border: 1px solid var(--border);
+  background: var(--bg-2);
+  border-radius: var(--radius-lg);
+  padding: 34px;
+}
+
+.asideTitle {
+  font-family: var(--font-heading);
+  font-size: 1.375rem;
+  font-weight: 600;
+  line-height: 1.3;
+  margin-bottom: 26px;
+}
+
+.asideRow {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  margin-bottom: 22px;
+  font-size: 16px;
+  line-height: 1.72;
+  color: var(--text-muted);
+}
+
+.rowIc { flex-shrink: 0; color: var(--accent); margin-top: 4px; display: inline-flex; }
+
+.asideDivider { height: 1px; background: var(--border); margin: 30px 0; }
+
+.asideList { list-style: none; display: grid; gap: 12px; }
+
+.asideList li {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  font-size: 15.5px;
+  color: var(--text-muted);
+}
+
+.asideList svg { color: var(--accent); flex-shrink: 0; }
+
+.asideCta { display: grid; gap: 12px; margin-top: 30px; }
+.asideCta :global(.btn) { width: 100%; }
+.asideNote { text-align: center; font-size: 13.5px; color: var(--text-muted); }
+
+/* ---------- Card grids ---------- */
+
+.bandAlt {
+  background: var(--bg-alt);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.headCentre { text-align: center; max-width: 780px; margin: 0 auto 56px; }
+.headCentre p { font-size: 18px; line-height: 1.75; margin-top: 18px; }
+
+.cardGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+  gap: 22px;
+}
+
+/* Fixed 3-up. auto-fit gives 4 columns at the 1450px container width, which
+   leaves a ragged 4+2 row for the six device repairs — this keeps it 3+3. */
+.cardGrid3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+@media (max-width: 1100px) {
+  .cardGrid3 { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 720px) {
+  .cardGrid3 { grid-template-columns: 1fr; }
+}
+
+/* Repair Lab card: generous radius, accent-tinted border, soft shadow, lift. */
+.infoCard {
+  background: var(--bg-2);
+  border: 1px solid var(--accent-line);
+  border-radius: var(--radius-card);
+  padding: 38px 32px 32px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+  transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.infoCard:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.45);
+}
+
+.infoCard h3 { font-size: 1.25rem; font-weight: 600; margin-bottom: 14px; }
+.infoCard p { font-size: 16px; line-height: 1.75; color: var(--text-muted); }
+
+/* Ringed icon chip. */
+.ic {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 18px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  box-shadow: inset 0 0 0 1px var(--accent-ring);
+  margin-bottom: 20px;
+}
+
+/* Compact link tiles (service list on a suburb page) */
+.tileGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 16px;
+}
+
+.tile {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px 24px;
+  border-radius: var(--radius);
+  border: 1px solid var(--accent-line);
+  background: var(--bg-2);
+  color: var(--text);
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 1.4;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+  transition: border-color 0.2s ease, transform 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tile:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.45);
+}
+
+.tile .tileIc {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  box-shadow: inset 0 0 0 1px var(--accent-ring);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ---------- Chips (internal linking) ---------- */
+
+.linkCols { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 48px; }
+
+.chipTitle {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.3;
+  margin-bottom: 22px;
+}
+
+.chips { display: flex; flex-wrap: wrap; gap: 12px; }
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 20px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 210, 30, 0.35);
+  color: var(--text-muted);
+  font-size: 15.5px;
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.chip:hover { border-color: var(--accent); color: var(--accent); }
+.chip svg { color: var(--accent); flex-shrink: 0; }
+
+/* ---------- Device spec strip ---------- */
+
+.specStrip {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--accent-line);
+  border-radius: var(--radius-card);
+  overflow: hidden;
+}
+
+.spec { background: var(--bg-2); padding: 28px 26px; }
+.spec dt { font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 10px; }
+.spec dd { font-family: var(--font-heading); font-weight: 600; font-size: 19px; color: var(--accent); }
+
+/* ---------- FAQ ---------- */
+
+.faqList { display: grid; gap: 14px; width: 100%; max-width: 900px; }
+
+.faq {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  background: var(--bg-2);
+  padding: 4px 28px;
+  transition: border-color 0.2s ease;
+}
+
+.faq[open] { border-color: var(--accent-line); }
+
+.faq summary {
+  cursor: pointer;
+  list-style: none;
+  padding: 24px 0;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.45;
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  align-items: center;
+}
+
+.faq summary::-webkit-details-marker { display: none; }
+
+.faq summary::after {
+  content: '+';
+  color: var(--accent);
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.faq[open] summary::after { content: '−'; }
+
+.answer { padding: 0 0 26px; color: var(--text-muted); font-size: 16.5px; line-height: 1.85; }
+
+/* ---------- CTA band ---------- */
+
+.cta { text-align: center; background: var(--bg-alt); border-top: 1px solid var(--border); }
+.cta h2 { margin-bottom: 20px; }
+.cta p { max-width: 680px; margin: 0 auto; font-size: 18px; line-height: 1.78; }
+.ctaActions { display: flex; flex-wrap: wrap; gap: 16px; justify-content: center; margin-top: 38px; }
+
+/* ---------- Steps ---------- */
+
+.steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 22px; counter-reset: step; }
+
+.step {
+  position: relative;
+  padding: 40px 30px 32px;
+  border: 1px solid var(--accent-line);
+  border-radius: var(--radius-card);
+  background: var(--bg-2);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+.step::before {
+  counter-increment: step;
+  content: counter(step);
+  position: absolute;
+  top: -20px;
+  left: 30px;
+  width: 42px;
+  height: 42px;
+  border-radius: 14px;
+  background: var(--accent);
+  color: #0b0b0c;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 17px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.step h3 { font-size: 1.2rem; font-weight: 600; margin-bottom: 12px; }
+.step p { font-size: 16px; line-height: 1.75; color: var(--text-muted); }
+
+/* ---------- Area index ---------- */
+
+.areaGroup { margin-bottom: 60px; }
+.areaGroupTitle { font-family: var(--font-heading); font-size: 1.5rem; font-weight: 600; margin-bottom: 10px; }
+.areaGroupNote { font-size: 16.5px; line-height: 1.7; margin-bottom: 28px; }
+
+.areaGrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; }
+
+.areaCard {
+  display: block;
+  padding: 24px 26px;
+  border-radius: var(--radius-card);
+  border: 1px solid var(--accent-line);
+  background: var(--bg-2);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+  transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.areaCard:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.45);
+}
+
+.areaCard strong {
+  display: block;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 1.15rem;
+  color: var(--text);
+  margin-bottom: 7px;
+}
+
+.areaCard:hover strong { color: var(--accent); }
+.areaCard span { font-size: 14.5px; color: var(--text-muted); }
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 1024px) {
+  .heroGrid { grid-template-columns: 1fr; gap: 44px; }
+  .split { grid-template-columns: 1fr; gap: 40px; }
+  .aside { position: static; }
+}
+
+@media (max-width: 600px) {
+  .hero { padding: 118px 0 56px; }
+  .lede { font-size: 18px; }
+  .prose p { font-size: 17px; }
+  .trustRow { gap: 26px; }
+  .aside { padding: 26px; }
+  .infoCard { padding: 30px 26px 26px; }
+  .faq { padding: 2px 22px; }
+  .faq summary { font-size: 16.5px; padding: 20px 0; }
+}

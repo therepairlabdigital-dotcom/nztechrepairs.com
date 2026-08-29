@@ -130,7 +130,7 @@ export default async function ServicePage({ params }: Params) {
               <div className={styles.heroMedia}>
                 <div className={styles.heroShape} aria-hidden="true" />
                 <div className={styles.heroFrame}>
-                  <Image src={s.image} alt={`${s.name} at NZ Tech Repairs Warkworth`} fill sizes="(max-width: 900px) 100vw, 40vw" style={{ objectFit: 'cover' }} />
+                  <Image src={s.image} alt={`${s.name} at NZ Tech Repairs Warkworth`} fill sizes="(max-width: 900px) 100vw, 40vw" priority style={{ objectFit: 'cover' }} />
                 </div>
               </div>
             </div>

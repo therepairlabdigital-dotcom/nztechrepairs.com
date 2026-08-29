@@ -1,0 +1,5 @@
+import React from 'react';
+
+export default function JsonLd({ schema }: { schema: object | object[] }) {
+  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />;
+}

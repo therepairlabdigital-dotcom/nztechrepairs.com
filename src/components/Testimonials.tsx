@@ -21,7 +21,7 @@ export default function Testimonials() {
             repairs!
           </p>
           <div className={styles.author}>
-            <Image src="/images/original/testimonial-jaime.png" alt="Jaime Toroa" width={56} height={56} className={styles.avatar} />
+            <Image src="/images/lab/review-avatar-1.webp" alt="Jaime Toroa" width={56} height={56} className={styles.avatar} />
             <div>
               <strong>Jaime Toroa</strong>
               <span>Verified Customer · 5/5</span>

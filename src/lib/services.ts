@@ -32,7 +32,7 @@ export const services: Service[] = [
     shortName: 'iPhone Repair',
     category: 'Phone & Tablet Repairs',
     icon: 'phone',
-    image: '/images/original/service-phone.jpg',
+    image: '/images/lab/mobile-repair-open-clean.webp',
     metaTitle: 'iPhone Repair Warkworth | Screen & Battery Fixes | NZ Tech Repairs',
     metaDescription:
       'Fast iPhone repair in Warkworth — cracked screens, batteries, charging ports and more. Most iPhones fixed in about 30 minutes with a 3-month warranty.',
@@ -64,7 +64,7 @@ export const services: Service[] = [
     shortName: 'Samsung & Android',
     category: 'Phone & Tablet Repairs',
     icon: 'samsung',
-    image: '/images/original/service-phone.jpg',
+    image: '/images/lab/mobile-repair-phone-open.webp',
     metaTitle: 'Samsung & Android Phone Repair Warkworth | NZ Tech Repairs',
     metaDescription:
       'Samsung and Android phone repair in Warkworth — screens, batteries, charging ports and water damage. Fast turnaround and a 3-month warranty. Call today.',
@@ -95,7 +95,7 @@ export const services: Service[] = [
     shortName: 'iPad & Tablet',
     category: 'Phone & Tablet Repairs',
     icon: 'tablet',
-    image: '/images/original/service-tablet.jpg',
+    image: '/images/lab/mobile-repair-small-1.webp',
     metaTitle: 'iPad & Tablet Repair Warkworth | Screen & Battery | NZ Tech Repairs',
     metaDescription:
       'iPad and tablet repair in Warkworth for all brands — cracked glass, battery, charging and more. Quality parts, fast turnaround and a 3-month warranty.',
@@ -126,7 +126,7 @@ export const services: Service[] = [
     shortName: 'Screen Replacement',
     category: 'Phone & Tablet Repairs',
     icon: 'screen',
-    image: '/images/original/service-phone.jpg',
+    image: '/images/lab/home-phone-cracked.webp',
     metaTitle: 'Phone Screen Replacement Warkworth | Cracked Screen Repair Near Me',
     metaDescription:
       'Cracked or smashed phone screen? Get a new phone screen fitted in Warkworth in about 30 minutes. Quality displays, fair prices and a 3-month warranty.',
@@ -157,7 +157,7 @@ export const services: Service[] = [
     shortName: 'Battery Replacement',
     category: 'Phone & Tablet Repairs',
     icon: 'battery',
-    image: '/images/hero-repair.jpg',
+    image: '/images/lab/mobile-repair-technician.webp',
     metaTitle: 'Battery Replacement Warkworth | Phone & Laptop Batteries | NZ Tech Repairs',
     metaDescription:
       'Phone and laptop battery replacement in Warkworth. Stop charging twice a day — get a fresh, high-capacity battery fitted fast with a 3-month warranty.',
@@ -188,7 +188,7 @@ export const services: Service[] = [
     shortName: 'Charging Port',
     category: 'Phone & Tablet Repairs',
     icon: 'charging',
-    image: '/images/hero-repair.jpg',
+    image: '/images/lab/phone-port-repair.webp',
     metaTitle: 'Charging Port Repair Warkworth | Phone Won’t Charge | NZ Tech Repairs',
     metaDescription:
       'Phone not charging or cable feels loose? We clean and repair charging ports on iPhone, Samsung and Android in Warkworth. Fast fixes with a 3-month warranty.',
@@ -219,7 +219,7 @@ export const services: Service[] = [
     shortName: 'Water Damage',
     category: 'Phone & Tablet Repairs',
     icon: 'water',
-    image: '/images/hero-repair.jpg',
+    image: '/images/lab/device-chip-repair.webp',
     metaTitle: 'Water Damage Phone Repair Warkworth | Liquid Damage | NZ Tech Repairs',
     metaDescription:
       'Dropped your phone in water? Bring it to NZ Tech Repairs in Warkworth fast. We clean, dry and repair liquid-damaged phones, tablets and laptops.',
@@ -250,7 +250,7 @@ export const services: Service[] = [
     shortName: 'MacBook Repair',
     category: 'Computer & Laptop',
     icon: 'macbook',
-    image: '/images/original/service-macbook.webp',
+    image: '/images/lab/service-bench-chip.webp',
     metaTitle: 'MacBook Repair Warkworth | Screen, Battery & Logic Board | NZ Tech Repairs',
     metaDescription:
       'Expert MacBook repair in Warkworth — screens, batteries, keyboards, charging and logic-board faults. Quality parts, honest quotes and a 3-month warranty.',
@@ -282,7 +282,7 @@ export const services: Service[] = [
     shortName: 'Laptop & PC Repair',
     category: 'Computer & Laptop',
     icon: 'laptop',
-    image: '/images/original/service-computer.jpg',
+    image: '/images/lab/service-bench-technician.webp',
     metaTitle: 'Laptop & Computer Repair Warkworth | PC Repairs Near Me | NZ Tech Repairs',
     metaDescription:
       'Laptop and computer repair in Warkworth — slow PCs, viruses, screens, power faults, upgrades and setups. Fast, friendly local service with honest quotes.',
@@ -314,7 +314,7 @@ export const services: Service[] = [
     shortName: 'TV Repair',
     category: 'TV & Wearables',
     icon: 'tv',
-    image: '/images/original/service-tv.webp',
+    image: '/images/lab/tv-repair-technician.webp',
     metaTitle: 'TV Repair Warkworth | LED, LCD & Smart TV Repairs | NZ Tech Repairs',
     metaDescription:
       'TV repair in Warkworth for LED, LCD and Smart TVs — no picture, no power, lines on screen, sound faults and more. Honest quotes and quality repairs.',
@@ -345,7 +345,7 @@ export const services: Service[] = [
     shortName: 'Apple Watch',
     category: 'TV & Wearables',
     icon: 'watch',
-    image: '/images/original/service-iwatch.webp',
+    image: '/images/lab/smart-watch.webp',
     metaTitle: 'Apple Watch Repair Warkworth | Screen & Battery | NZ Tech Repairs',
     metaDescription:
       'Apple Watch repair in Warkworth — cracked screens, batteries and charging faults for all Series. Precise, careful repairs with a 3-month warranty.',
@@ -375,7 +375,7 @@ export const services: Service[] = [
     shortName: 'Data Recovery',
     category: 'Data & Software',
     icon: 'data',
-    image: '/images/original/service-data.png',
+    image: '/images/lab/technician-microscope-repair.webp',
     metaTitle: 'Data Recovery Warkworth | Photos & Files Recovered | NZ Tech Repairs',
     metaDescription:
       'Lost photos, files or a dead phone or hard drive? NZ Tech Repairs in Warkworth recovers data from phones, computers and drives. Bring it in for an assessment.',
@@ -406,7 +406,7 @@ export const services: Service[] = [
     shortName: 'Unlocking & Software',
     category: 'Data & Software',
     icon: 'unlock',
-    image: '/images/original/service-unlocking.png',
+    image: '/images/lab/unlocking-services.webp',
     metaTitle: 'Phone Unlocking Warkworth | Network Unlock & Software | NZ Tech Repairs',
     metaDescription:
       'Network unlocking and software help in Warkworth — unlock your phone for any carrier, fix software issues and update your device. Friendly local service.',
@@ -436,7 +436,7 @@ export const services: Service[] = [
     shortName: 'Screen Protectors',
     category: 'Accessories',
     icon: 'shield',
-    image: '/images/original/service-phone.jpg',
+    image: '/images/lab/mobile-repair-small-2.webp',
     metaTitle: 'Screen Guard & Protector Fitting Warkworth | NZ Tech Repairs',
     metaDescription:
       'Tempered glass screen guards and protectors fitted in Warkworth for phones and tablets. Bubble-free fitting that protects your screen from cracks and scratches.',
@@ -466,7 +466,7 @@ export const services: Service[] = [
     shortName: 'Accessories',
     category: 'Accessories',
     icon: 'accessories',
-    image: '/images/hero-repair.jpg',
+    image: '/images/lab/phone-port-clean.webp',
     metaTitle: 'Phone Accessories Warkworth | Cases, Chargers & Cables | NZ Tech Repairs',
     metaDescription:
       'Phone cases, chargers, cables and accessories in Warkworth. Quality gear for iPhone, Samsung and more — plus we buy and recycle old phones and laptops.',
