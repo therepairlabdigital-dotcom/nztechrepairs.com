@@ -24,6 +24,8 @@ const notoSansHeading = Noto_Sans({
 export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,
+  // Matches --bg, so mobile browser chrome blends into the dark page
+  themeColor: '#0b0b0c',
 };
 
 export const metadata: Metadata = {

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="NZ Tech Repairs">
+  <rect width="64" height="64" rx="14" fill="#ffd21e"/>
+  <g fill="#0b0b0c">
+    <!-- N -->
+    <path d="M8 17h6v30H8z"/>
+    <path d="M23 17h6v30h-6z"/>
+    <path d="M8 17h6l15 30h-6z"/>
+    <!-- Z -->
+    <path d="M35 17h21v6H35z"/>
+    <path d="M35 41h21v6H35z"/>
+    <path d="M50 17h6L41 47h-6z"/>
+  </g>
+</svg>
