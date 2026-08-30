@@ -31,6 +31,7 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   alternates: { canonical: '/' },
+  verification: { google: 'BM6HRSVGVWQgKGdxizQdVwOt92moalZkTy6ggMRRJz4' },
   title: 'NZ Tech Repairs | Warkworth Mobile Phone & PC Repair Specialists',
   description: 'Fast, professional repair services for iPhones, iPads, MacBooks, Apple Watches, laptops, and TVs in Warkworth. 30-minute average turnaround and a 3-month repair warranty.',
   keywords: 'phone repair warkworth, ipad repair, macbook repair warkworth, computer repair, screen replacement warkworth, data recovery nz, tv repair, nz tech repairs, the grange warkworth',
