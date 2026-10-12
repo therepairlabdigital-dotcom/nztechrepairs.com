@@ -147,6 +147,10 @@ export default function Footer() {
         <div className={styles.bottom}>
           <p>&copy; 2024–25 NZTechRepairs.com — All Rights Reserved.</p>
           <p>Warkworth, New Zealand</p>
+          <a href="https://kiwitechlabs.com" target="_blank" rel="noopener noreferrer" className={styles.designerCredit}>
+            <Image src="/assets/brand/kiwitechlabs-logo.webp" width={40} height={40} alt="" unoptimized />
+            <span>Designed by <strong>kiwitechlabs.com</strong></span>
+          </a>
         </div>
       </div>
     </footer>
